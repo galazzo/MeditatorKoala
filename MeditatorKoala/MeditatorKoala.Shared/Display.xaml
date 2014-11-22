@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="MeditatorKoala.Display"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MeditatorKoala"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="500">
+    
+    <Grid Name="DisplayPanelGrid">
+        <Grid.Resources>
+            <local:WidthConverter x:Key="WidthConverter" />
+            <local:LeftThicknessConverter x:Key="LeftThicknessConverter" />
+            <local:FontSizeConverter x:Key="FontSizeConverter" />
+        </Grid.Resources>
+
+        <Image Source="Assets/SfondoMenuOrizzontale.png" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=1.0}"/>
+        <Grid Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}"
+              HorizontalAlignment="Left">
+            <Image Source="Assets/CerchioMenuOrizzontale.png" VerticalAlignment="Center"/>
+            <Image Name="Icon" Source="Assets/icona-attenzione.png" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.14}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        <TextBlock Name="Text"  Text="" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource LeftThicknessConverter}, ConverterParameter=0.31}" FontSize="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource FontSizeConverter}, ConverterParameter=0.051}" />
+        <Grid Name="PbarConsole" VerticalAlignment="Center" Margin="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource LeftThicknessConverter}, ConverterParameter=0.31}" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.6}" Visibility="Collapsed" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar Name="Pbar" Grid.Column="0" Minimum="0" Maximum="100" Value="0" Height="18" ValueChanged="Pbar_ValueChanged"/>
+            <TextBlock Name="PbarValue" Grid.Column="1" Text="0" FontSize="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource FontSizeConverter}, ConverterParameter=0.072}" Margin="6,0,0,0"/>
+        </Grid>        
+        <local:StopWatchControl x:Name="RaceStopWatch" VerticalAlignment="Center" Visibility="Collapsed" Margin="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource LeftThicknessConverter}, ConverterParameter=0.31}" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.6}"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="MeditatorKoala.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MeditatorKoala"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Name="DisplayPanelGrid">
+        <Grid.Resources>
+            <local:WidthConverter x:Key="WidthConverter" />            
+        </Grid.Resources>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/Background.png"/>
+        </Grid.Background>
+        
+        <Image Name="Tree" Source="Assets/Tree.png" Stretch="Fill"/>
+
+        <Image Name="Koala" Source="{Binding Path=CurrentFrame}"/>
+
+        <Grid VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".3*"/>
+                <ColumnDefinition Width=".3*"/>
+                <ColumnDefinition Width=".3*"/>
+            </Grid.ColumnDefinitions>
+            <local:Display x:Name="ConnectionState" Grid.Column="0" VerticalAlignment="Top" IconSource="ms-appx:///Assets/icona-connessione.png" x:Uid="ConnectionStatus" Content="Not Connected"/>
+            <local:Display x:Name="AttentionIndicator"  Grid.Column="1" VerticalAlignment="Top" ShowProgressBar="true"  />
+            <local:Display x:Name="StopWatchIndicator" Grid.Column="2" VerticalAlignment="Top"  ShowStopWatch="True" IconSource="ms-appx:///Assets/icona-cronometro.png"/>
+        </Grid>
+
+        <local:ManagerPanelControl x:Name="ManagerPanel" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}" Height="{Binding ActualHeight, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <local:OptionPanelControl x:Name="OptionPanel" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}" Height="{Binding ActualHeight, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+        
+    </Grid>
+</Page>
