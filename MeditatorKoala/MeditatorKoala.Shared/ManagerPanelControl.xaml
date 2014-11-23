@@ -9,7 +9,7 @@
     d:DesignHeight="300"
     d:DesignWidth="500">
 
-    <Grid Name="DisplayPanelGrid">
+    <Grid Name="DisplayPanelGrid" Width="500" Height="300">
         <Grid.Resources>
             <local:WidthConverter x:Key="WidthConverter" />
             <local:LeftRightThicknessConverter x:Key="LeftRightThicknessConverter" />
@@ -26,6 +26,7 @@
                                 <BitmapImage x:Key="NormalButton" UriSource="Assets/BottoneVerde.png"></BitmapImage>
                                 <BitmapImage x:Key="OnMouseOver" UriSource="Assets/OnMouseOver.png"></BitmapImage>
                                 <BitmapImage x:Key="OnPressed" UriSource="Assets/BottoneRosso.png"></BitmapImage>
+                                <BitmapImage x:Key="Disabled" UriSource="Assets/BottonDisabled.png"></BitmapImage>
                             </Grid.Resources>
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
@@ -43,7 +44,7 @@
                                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource OnPressed}"/>
                                             </ObjectAnimationUsingKeyFrames>
                                         </Storyboard>
-                                    </VisualState>
+                                    </VisualState>                                    
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
                             <Grid>
@@ -171,6 +172,9 @@
                 </Button.Template>
             </Button>
         </StackPanel>
-        <Image Source="Assets/Title.png"  Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.13}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-25,-25,0,0"/>
+        <Image Source="Assets/Title.png"  
+               Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.35}"                
+               Margin="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource LeftRightThicknessConverter}, ConverterParameter=-0.05}"
+               HorizontalAlignment="Left" VerticalAlignment="Top" />
     </Grid>
 </UserControl>

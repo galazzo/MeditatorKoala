@@ -111,6 +111,7 @@
     </AppxManifest>
     <None Include="MeditatorKoala.Windows_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />
@@ -138,12 +139,25 @@
       <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="MultilingualResources\MeditatorKoala.Windows.it.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultilingualResources\MeditatorKoala.Windows.en.xlf" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>3.0</MultilingualAppToolkitVersion>
+    <MakePriLog>$(Temp)\$(MSBuildProjectName)_Multilingual.prilog.xml</MakePriLog>
+    <AppxGenerateProjectPriFileAdditionalMakepriExeParameters>/IndexLog "$(MakePriLog)"</AppxGenerateProjectPriFileAdditionalMakepriExeParameters>
   </PropertyGroup>
   <Import Project="..\MeditatorKoala.Shared\MeditatorKoala.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
     <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
     <Error Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />

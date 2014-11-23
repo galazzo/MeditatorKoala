@@ -62,6 +62,9 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\BottoneVerde.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\ButtonDisabled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\CerchioMenuOrizzontale.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -74,43 +77,64 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\icona-cronometro.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala00.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala00.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala06.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala07.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala08.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala09.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala10.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala11.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\koala11.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala12.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala13.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\koala13.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala14.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala15.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\koala15.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala17.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\koala17.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala18.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\koala18.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala19.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala02.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala20.png">
@@ -134,28 +158,46 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala26.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala27.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\koala27.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala03.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\koala28.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala04.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala29.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala05.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala30.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala06.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala31.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala07.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala08.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala33.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala09.png">
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala35.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala37.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala38.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala39.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\OnMouseOver.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\SfondoMenuOrizzontale.png">

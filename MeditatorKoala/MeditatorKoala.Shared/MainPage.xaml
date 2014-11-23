@@ -20,18 +20,33 @@
 
         <Image Name="Koala" Source="{Binding Path=CurrentFrame}"/>
 
-        <Grid VerticalAlignment="Bottom">
+
+        <Grid VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width=".3*"/>
                 <ColumnDefinition Width=".3*"/>
                 <ColumnDefinition Width=".3*"/>
             </Grid.ColumnDefinitions>
-            <local:Display x:Name="ConnectionState" Grid.Column="0" VerticalAlignment="Top" IconSource="ms-appx:///Assets/icona-connessione.png" x:Uid="ConnectionStatus" Content="Not Connected"/>
-            <local:Display x:Name="AttentionIndicator"  Grid.Column="1" VerticalAlignment="Top" ShowProgressBar="true"  />
-            <local:Display x:Name="StopWatchIndicator" Grid.Column="2" VerticalAlignment="Top"  ShowStopWatch="True" IconSource="ms-appx:///Assets/icona-cronometro.png"/>
+            <local:Display x:Name="ConnectionState" Grid.Column="0" VerticalAlignment="Top" IconSource="ms-appx:///Assets/icona-connessione.png" x:Uid="ConnectionStatus" TextValue="Not Connected"/>            
+        </Grid>
+        
+        
+        <Grid VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".3*"/>
+                <ColumnDefinition Width=".3*"/>                
+                <ColumnDefinition Width=".3*"/>
+            </Grid.ColumnDefinitions>
+            
+            <local:Display x:Name="AttentionIndicator"  Grid.Column="0" VerticalAlignment="Top" ShowProgressBar="true"  />
+            <local:Display x:Name="StopWatchIndicator" Grid.Column="1" VerticalAlignment="Top"  ShowStopWatch="True" IconSource="ms-appx:///Assets/icona-cronometro.png"/>
+            <local:Display x:Name="NegativeScore" Grid.Column="2" VerticalAlignment="Top" IconSource="ms-appx:///Assets/icona-connessione.png" x:Uid="NegativeScores" TextValue="Negative Scores: 0" />
         </Grid>
 
-        <local:ManagerPanelControl x:Name="ManagerPanel" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}" Height="{Binding ActualHeight, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <local:ManagerPanelControl x:Name="ManagerPanel"
+                                   Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}"
+                                   Height="{Binding ActualHeight, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}" 
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <local:OptionPanelControl x:Name="OptionPanel" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}" Height="{Binding ActualHeight, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
         
     </Grid>

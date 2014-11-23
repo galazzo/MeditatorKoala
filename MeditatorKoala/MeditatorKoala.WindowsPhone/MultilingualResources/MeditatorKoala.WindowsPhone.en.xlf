@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en" original="MeditatorKoala.WindowsPhone_Multilingual.prilog.xml" tool-id="MultilingualAppToolkit" product-name="MeditatorKoala.WindowsPhone" product-version="1.0.0.0" build-num="0">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1085.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resources">
+        <trans-unit id="Resources\DeviceType\Text" translate="yes" xml:space="preserve">
+          <source>Device Type</source>
+          <target state="new">Device Type</target>
+        </trans-unit>
+        <trans-unit id="Resources\DeltaWaves\Text" translate="yes" xml:space="preserve">
+          <source>Delta Waves - Deep sleep, Unconsious</source>
+          <target state="new">Delta Waves - Deep sleep, Unconsious</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState_Paused" translate="yes" xml:space="preserve">
+          <source>Paused</source>
+          <target state="new">Paused</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState_NotFound" translate="yes" xml:space="preserve">
+          <source>Device not found</source>
+          <target state="new">Device not found</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState_NotConnected" translate="yes" xml:space="preserve">
+          <source>Not connected</source>
+          <target state="new">Not connected</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState_FailedDuringExecution" translate="yes" xml:space="preserve">
+          <source>Failed during execution</source>
+          <target state="new">Failed during execution</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState_FailedConnection" translate="yes" xml:space="preserve">
+          <source>Connection failed</source>
+          <target state="new">Connection failed</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState_Connecting" translate="yes" xml:space="preserve">
+          <source>Connecting</source>
+          <target state="new">Connecting</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState_ConnectedWithUnreliableData" translate="yes" xml:space="preserve">
+          <source>Connected with unreliable data</source>
+          <target state="new">Connected with unreliable data</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState_ConnectedWithNoDataYet" translate="yes" xml:space="preserve">
+          <source>Connected with no data yet</source>
+          <target state="new">Connected with no data yet</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState_ConnectedWithData" translate="yes" xml:space="preserve">
+          <source>Connected with data</source>
+          <target state="new">Connected with data</target>
+        </trans-unit>
+        <trans-unit id="Resources\ConnectionState\Text" translate="yes" xml:space="preserve">
+          <source>Connection State</source>
+          <target state="new">Connection State</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

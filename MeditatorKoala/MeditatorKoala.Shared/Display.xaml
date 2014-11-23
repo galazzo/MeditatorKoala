@@ -17,7 +17,7 @@
         </Grid.Resources>
 
         <Image Source="Assets/SfondoMenuOrizzontale.png" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=1.0}"/>
-        <Grid Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.3}"
+        <Grid Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter='0.3'}"
               HorizontalAlignment="Left">
             <Image Source="Assets/CerchioMenuOrizzontale.png" VerticalAlignment="Center"/>
             <Image Name="Icon" Source="Assets/icona-attenzione.png" Width="{Binding ActualWidth, ElementName=DisplayPanelGrid, Converter={StaticResource WidthConverter}, ConverterParameter=0.14}" HorizontalAlignment="Center" VerticalAlignment="Center" />

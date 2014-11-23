@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
+using System.Globalization;
 
 namespace MeditatorKoala
 {
@@ -14,8 +15,8 @@ namespace MeditatorKoala
             string str_percentage = parameter as string;
             if (!string.IsNullOrEmpty(str_percentage))
             {
-                var percentage = Double.Parse(str_percentage);
-                //System.Diagnostics.Debug.WriteLine("Value:" + (double)value + " | %:" + percentage + " >>>>:" + String.Format("{0}", percentage * (double)value));
+                var percentage = Double.Parse(str_percentage, CultureInfo.InvariantCulture);
+                //System.Diagnostics.Debug.WriteLine("Parameter:" + str_percentage + "Value:" + (double)value + " | %:" + percentage + " >>>>:" + String.Format("{0}", percentage * (double)value));
                 return String.Format("{0}", percentage * (double)value);
             }
             // If the format string is null or empty, simply call ToString()
@@ -38,7 +39,7 @@ namespace MeditatorKoala
             string str_percentage = parameter as string;
             if (!string.IsNullOrEmpty(str_percentage))
             {
-                var percentage = Double.Parse(str_percentage);
+                var percentage = Double.Parse(str_percentage, CultureInfo.InvariantCulture);
                 return new Thickness(percentage * (double)value, 0, 0, 0);
             }
             // If the format string is null or empty, simply call ToString()
@@ -61,7 +62,7 @@ namespace MeditatorKoala
             string str_percentage = parameter as string;
             if (!string.IsNullOrEmpty(str_percentage))
             {
-                var percentage = Double.Parse(str_percentage);
+                var percentage = Double.Parse(str_percentage, CultureInfo.InvariantCulture);
                 var tickness = percentage * (double)value;
                 return new Thickness(tickness, 0, tickness, 0);
             }
@@ -85,7 +86,7 @@ namespace MeditatorKoala
             string str_percentage = parameter as string;
             if (!string.IsNullOrEmpty(str_percentage) && ((double)value > 0.0))
             {
-                var percentage = Double.Parse(str_percentage);
+                var percentage = Double.Parse(str_percentage, CultureInfo.InvariantCulture);
                 var fontSize = percentage * (double)value;                
                 if (fontSize > 72.0) fontSize = 72;                
                 return  String.Format("{0}", fontSize);

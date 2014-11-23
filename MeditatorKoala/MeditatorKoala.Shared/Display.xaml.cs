@@ -26,7 +26,7 @@ namespace MeditatorKoala
             }
         }
 
-        public string Content
+        public string TextValue
         {
             get
             {

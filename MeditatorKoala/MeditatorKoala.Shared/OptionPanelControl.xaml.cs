@@ -29,6 +29,22 @@ namespace MeditatorKoala
             }
         }
 
+        public int Difficulty
+        {
+            get
+            {
+                int result = 100;
+                switch (DifficultyLevel.SelectedIndex)
+                {
+                    case 0: result = 50; break;
+                    case 1: result = 75; break;
+                    case 2: result = 91; break;
+                    default: result = 75; break;
+                }
+                return result ;
+            }
+        }
+
         public OptionPanelControl()
         {
             this.InitializeComponent();

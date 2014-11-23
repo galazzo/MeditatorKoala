@@ -15,12 +15,33 @@ namespace MeditatorKoala
     {
         public enum States { 
 
-            Sleeping,
-            Drowsiness,
+            Sleeping,            
             Awake,
-            Hyperactivity
+            Hyperactivity,
+            Fallen
         };
-        public States State { get; set; }
+
+        private States m_state;
+        public States State {
+            get
+            {
+                return m_state;
+            }
+
+            set
+            {
+                m_state = value;
+                switch (m_state)
+                {
+                    case States.Sleeping: CurrentFrameIndex = 0; break;
+                    case States.Awake: CurrentFrameIndex = 7; break;
+                    case States.Hyperactivity: CurrentFrameIndex = 13; break;
+                    default: CurrentFrameIndex = 0; break;
+                }
+                NotifyPropertyChanged();
+            }
+        }
+
 
         private ImageSource m_currentFrame = null;
         public ImageSource CurrentFrame
@@ -43,7 +64,7 @@ namespace MeditatorKoala
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
         private int CurrentFrameIndex = 0;
 
-        public static int FrameCount = 27;
+        public static int FrameCount = 40;
         private ImageSource[] Frame = new ImageSource[FrameCount];
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -86,9 +107,30 @@ namespace MeditatorKoala
                     case States.Sleeping:
                         {
                             CurrentFrameIndex++;                                                   
-                            if (CurrentFrameIndex > 26)
+                            if (CurrentFrameIndex > 6)
                             {
                                 CurrentFrameIndex = 0;
+                            }
+                            CurrentFrame = Frame[CurrentFrameIndex];
+                            break;
+                        }
+                    case States.Awake:
+                        {
+                            CurrentFrameIndex++;                                                   
+                            if (CurrentFrameIndex > 13)
+                            {
+                                CurrentFrameIndex = 7;
+                            }
+                            CurrentFrame = Frame[CurrentFrameIndex];
+                            break;
+                        }
+                    case States.Hyperactivity:
+                        {
+                            CurrentFrameIndex++;
+                            if (CurrentFrameIndex > 39)
+                            {
+                                CurrentFrameIndex = 39;
+                                State = States.Fallen;
                             }
                             CurrentFrame = Frame[CurrentFrameIndex];
                             break;
