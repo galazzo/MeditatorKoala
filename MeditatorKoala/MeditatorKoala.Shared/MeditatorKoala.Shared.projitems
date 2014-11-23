@@ -77,6 +77,9 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\icona-cronometro.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\icona-skull.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)Assets\Koala\Koala00.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

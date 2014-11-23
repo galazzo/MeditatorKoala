@@ -40,7 +40,7 @@
             
             <local:Display x:Name="AttentionIndicator"  Grid.Column="0" VerticalAlignment="Top" ShowProgressBar="true"  />
             <local:Display x:Name="StopWatchIndicator" Grid.Column="1" VerticalAlignment="Top"  ShowStopWatch="True" IconSource="ms-appx:///Assets/icona-cronometro.png"/>
-            <local:Display x:Name="NegativeScore" Grid.Column="2" VerticalAlignment="Top" IconSource="ms-appx:///Assets/icona-connessione.png" x:Uid="NegativeScores" TextValue="Negative Scores: 0" />
+            <local:Display x:Name="NegativeScore" Grid.Column="2" VerticalAlignment="Top" IconSource="ms-appx:///Assets/icona-skull.png" x:Uid="NegativeScores" TextValue="Negative Scores: 0" />
         </Grid>
 
         <local:ManagerPanelControl x:Name="ManagerPanel"
